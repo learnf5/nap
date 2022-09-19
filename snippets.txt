@@ -3,7 +3,7 @@ NGINX App Protect Training Class SNIPPETS lab file:
 
 Lab: Verify NGINX Plus Installation and Access the Juice Shop Application
 
-Step 2c
+Step 2d
 
 apt list --installed | grep nginx
 

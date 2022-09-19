@@ -367,16 +367,6 @@ Step 5a
 
 curl -H "Host: 1.2.3.4" http://10.0.0.11/
 
-Step 6a
-
-curl -H "Content-Length: -26" http://10.0.0.11/
-
-Step 6b
-
-sudo grep "status: 400" /var/log/nginx/access.log
-
-
-
 **************************************************************************************************************
 
 Part 3: Working with Evasion Technique violations

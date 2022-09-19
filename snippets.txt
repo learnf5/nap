@@ -28,7 +28,7 @@ Step 5b (The vim editor is used in this example)
 
 sudo vim /etc/nginx/nginx.conf
 
-Step 5c
+Step 5d
 
 load_module modules/ngx_http_app_protect_module.so;
 
@@ -96,7 +96,7 @@ less /etc/nginx/conf.d/nap.conf
 
 Step 2a
 
-http://10.0.0.1/<script>
+http://10.0.0.11/<script>
 
 
 Step 2c

@@ -809,74 +809,7 @@ End of lab
 
 **************************************************************************************************************
 
-Chapter 10: Mitigating DOS Attacks
-
-Part 1: Verify NGINX Plus software installation and load DOS module
-Step 1a
-
-apt list --installed | grep nginx
-
-Step 1c 
-
-ps aux | grep admd
-
-Step 1d
-
-admd -v
-
-Step 2a
-
-sudo vim /etc/nginx/nginx.conf
-
-Step 2b
-
-# comment out all App Protect WAF directives
-
-Step 2c
-
-load_module modules/ngx_http_app_protect_dos_Chapter.so;
-
-Step 3a
-
-    app_protect_dos_enable on;
-    app_protect_dos_name "vs-student";
-    app_protect_dos_policy_file "/etc/app_protect_dos/BADOSDefaultPolicy.json";
-    app_protect_dos_monitor uri=http://myserver:80;
-    app_protect_dos_security_log_enable on;
-    app_protect_dos_security_log "/etc/app_protect_dos/log-default.json" /var/log/app_protect/demo.log;
-
-Step 3c
-
-sudo cp /etc/nginx/conf.d/nap.conf.bak /etc/nginx/conf.d/nap.conf
-
-Step 4a
-
-sudo systemctl restart nginx
-
-Step 4b
-
-sudo grep APP_PROTECT_DOS /var/log/nginx/error.log
-
-Step 4c
-
-ls -l /var/log/app_protect/demo.log
-
-**************************************************************************************************************
-
-Chapter 10: Denial of Service
-
-On Student Workstation machine run GoodTraffic.sh and later BadTraffic.sh - follow lab steps
-
-On NGINX App Protect machine:
-Step 2d
-
-sudo tail -f /var/log/app_protect/demo.log
-
-End of lab
-
-**************************************************************************************************************
-
-Chapter 11: Troubleshooting
+Chapter 10: Troubleshooting
 
 
 Part 1: Troubleshooting an NGINX Configuration File Error

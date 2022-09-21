@@ -703,14 +703,6 @@ Part 1: Update Attack Signatures
 
 Step 1c
 
-apt list --installed | grep app-protect
-
-Step 1e
-
-apt list --installed | grep app-protect-attack
-
-Step 1f
-
 sudo /opt/app_protect/bin/get-signatures -o /tmp/signature-report.json | jq
 
 cat /tmp/signature-report.json | jq '.revisionDatetime'
@@ -775,7 +767,6 @@ Step 6d
 sudo /opt/app_protect/bin/get-signatures -o /tmp/new-signature-report.json | jq
 
 cat /tmp/new-signature-report.json | jq '.revisionDatetime'
-
 
 **************************************************************************************************************
 

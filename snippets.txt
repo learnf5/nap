@@ -1,5 +1,5 @@
 # v1.0 by F5 Training Development Group
-NGINX App Protect Training Class SNIPPETS lab file:
+# NGINX App Protect Self-paced Training Class snippets lab file
 
 Lab: Verify NGINX Plus Installation and Access the Juice Shop Application
 
